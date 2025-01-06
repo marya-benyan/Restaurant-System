@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Ordering System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Order Form</h1>
+      <form id="orderForm">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="date" id="dob" required>
+        <div>
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div><br>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <div><br>
+          <label>Order Type:</label>
+          <label><input type="checkbox" name="orderType" value="Shawarma"> Shawarma</label>
+          <label><input type="checkbox" name="orderType" value="Zinger"> Zinger</label>
+          <label><input type="checkbox" name="orderType" value="Burger"> Burger</label>
+        </div><br>
+        <div>
+          <label>Order Option:</label>
+          <label><input type="radio" name="orderOption" value="Combo"> Combo</label>
+          <label><input type="radio" name="orderOption" value="Sandwich"> Sandwich</label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="customersContainer">
+      <h2>Customer List</h2>
+      <div id="cardsContainer" class="cards-container">
+        <!-- Cards will be added dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Restaurant Ordering System</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
