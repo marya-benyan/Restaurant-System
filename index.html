@@ -7,44 +7,71 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- <!- Header Section --> 
   <header>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#order-form">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section>
+    <!-- Order Form Section -->
+    <section id="order-form">
       <h1>Order Form</h1>
       <form id="orderForm">
-        <input type="text" id="fullName" placeholder="Full Name" required>
-        <input type="password" id="password" placeholder="Password" required>
+        <!-- Full Name -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" required>
-        <div>
-          <label>Gender:</label>
+
+        <!-- Gender -->
+        <fieldset>
+          <legend>Gender:</legend>
           <label><input type="radio" name="gender" value="Male"> Male</label>
           <label><input type="radio" name="gender" value="Female"> Female</label>
-        </div><br>
-        <input type="tel" id="phone" placeholder="Phone Number" required>
-        <div><br>
-          <label>Order Type:</label>
+        </fieldset>
+
+        <!-- Phone -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <!-- Order Type -->
+        <fieldset>
+          <legend>Order Type:</legend>
           <label><input type="checkbox" name="orderType" value="Shawarma"> Shawarma</label>
           <label><input type="checkbox" name="orderType" value="Zinger"> Zinger</label>
           <label><input type="checkbox" name="orderType" value="Burger"> Burger</label>
-        </div><br>
-        <div>
-          <label>Order Option:</label>
+        </fieldset>
+
+        <!-- Order Option -->
+        <fieldset>
+          <legend>Order Option:</legend>
           <label><input type="radio" name="orderOption" value="Combo"> Combo</label>
           <label><input type="radio" name="orderOption" value="Sandwich"> Sandwich</label>
-        </div>
+        </fieldset>
+
+        <!-- Image Upload -->
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" accept="image/*">
+
+        <!-- Submit Button -->
         <button type="submit">Submit</button>
       </form>
     </section>
 
+    <!-- Customer List Section -->
     <section id="customersContainer">
       <h2>Customer List</h2>
       <div id="cardsContainer" class="cards-container">
@@ -53,10 +80,12 @@
     </section>
   </main>
 
+  <!-- Footer Section -->
   <footer>
-    <p>&copy; 2025 Restaurant Ordering System</p>
+    <p>&copy; 2025 Restaurant Ordering System. All rights reserved.</p>
   </footer>
 
+  <!-- JavaScript File -->
   <script src="app.js"></script>
 </body>
-</html>
+</html>  
